@@ -530,6 +530,12 @@
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
   hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); navLinks.classList.toggle('mobile-open'); });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
   // Filter buttons (visual only - swap for real filtering when real reviews exist)
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
