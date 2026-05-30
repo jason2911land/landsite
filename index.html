@@ -22,7 +22,7 @@
       <li><a href="#about">About Us</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact-form">Contact</a></li>
     </ul>
     <div>
       <a href="tel:6822281984" class="nav-cta">
@@ -48,7 +48,7 @@
       </h1>
       <p class="hero-sub">Landscaping, Land Leveling &amp; Driveways That Last.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Request a Free Estimate <span class="arrow">→</span></a>
+        <a href="#contact-form" class="btn-primary">Request a Free Estimate <span class="arrow">→</span></a>
         <a href="#services" class="btn-secondary">View Our Services <span class="arrow">→</span></a>
       </div>
     </div>
@@ -99,7 +99,7 @@
         <img src="skidsteer1.png" alt="Land Clearing">
         <img src="driveway.png"   alt="Gravel Driveway">
         <img src="skidsteer2.png" alt="Land Leveling">
-        <img src="land1.png"       alt="Site Prep">
+        <img src="land.png"       alt="Site Prep">
         <img src="trailer.png"    alt="Haul Off">
       </div>
       <div class="service-cards">
@@ -175,7 +175,7 @@
     <div class="testimonial-quote">
       <span class="quote-mark">"</span>
       <p class="quote-text">
-        2911 Land Solutions did an awesome job on our new driveway! Great communication, showed up when they said they would, and the quality of work is top notch. Highly recommend!
+        29:11 Land Solutions did an awesome job on our new driveway! Great communication, showed up when they said they would, and the quality of work is top notch. Highly recommend!
       </p>
       <div class="quote-author">
         <span class="quote-author-name">– Jason H.</span>
@@ -189,8 +189,97 @@
     </div>
   </section>
 
+  <!-- ══ CONTACT FORM ══════════════════════════════════════════════════════ -->
+  <section class="contact-section" id="contact-form">
+    <div class="contact-inner">
+
+      <div class="contact-left">
+        <p class="section-label" style="color:var(--gold);">Get In Touch</p>
+        <h2 class="contact-heading">Request a<br><span class="text-gold">Free Estimate</span></h2>
+        <p class="contact-desc">Tell us about your project and we'll get back to you fast. No pressure, no hassle — just straight answers and honest pricing.</p>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="contact-info-icon">📞</span>
+            <div>
+              <div class="contact-info-label">Call or Text Jason</div>
+              <a href="tel:6822281984" class="contact-info-value">682-228-1984</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-icon">✉</span>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+              <a href="mailto:jason2911land@gmail.com" class="contact-info-value">jason2911land@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-icon">📍</span>
+            <div>
+              <div class="contact-info-label">Based In</div>
+              <span class="contact-info-value">Godley, TX &amp; Surrounding Areas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="form-card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name <span class="req">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name <span class="req">*</span></label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(682) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="land-clearing">Land Clearing</option>
+              <option value="gravel-driveway">Gravel Driveway</option>
+              <option value="land-leveling">Land Leveling</option>
+              <option value="site-prep">Site Prep</option>
+              <option value="haul-off">Haul Off</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe your project, property size, location, etc..."></textarea>
+          </div>
+          <div class="form-sms-consent">
+            <label class="sms-label">
+              <input type="checkbox" id="sms-consent" name="sms-consent">
+              <span class="sms-text">I agree to receive SMS communication from 29:11 Land Solutions regarding estimates, appointments, and service updates. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-primary form-submit" onclick="handleFormSubmit(event)">
+            Send My Request <span class="arrow">→</span>
+          </button>
+          <div class="form-success" id="form-success">
+            ✅ Thanks! We'll be in touch shortly.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ══ CTA BANNER ════════════════════════════════════════════════════════ -->
-  <section class="cta-banner" id="contact">
+  <section class="cta-banner">
     <div class="cta-banner-text">
       <h2 class="cta-banner-heading">Ready to Get <em>Your Project</em> Started?</h2>
       <p class="cta-banner-sub">Let's get your land ready for what's next.</p>
@@ -202,7 +291,7 @@
         <div class="cta-phone-number">682-228-1984</div>
       </div>
     </a>
-    <a href="#contact" class="btn-primary cta-btn-large">
+    <a href="#contact-form" class="btn-primary cta-btn-large">
       Request a Free Estimate <span class="arrow">→</span>
     </a>
   </section>
@@ -238,7 +327,9 @@
           <li><a href="#">About Us</a></li>
           <li><a href="#">Gallery</a></li>
           <li><a href="#">Reviews</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact-form">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
         </ul>
       </div>
 
@@ -272,9 +363,52 @@
 
     </div>
     <div class="footer-bottom">
-      © 2024 29:11 Land Solutions. All Rights Reserved.
+      <div class="footer-bottom-left">© 2024 29:11 Land Solutions. All Rights Reserved.</div>
+      <div class="footer-bottom-right">Designed by <a href="https://legacyivdigital.com" target="_blank" rel="noopener">Legacy IV Digital Solutions</a></div>
     </div>
   </footer>
+
+  <!-- ══ STICKY CTA ════════════════════════════════════════════════════════ -->
+  <a href="#contact-form" class="sticky-cta" id="sticky-cta">
+    Request a Free Estimate <span class="arrow">→</span>
+  </a>
+
+  <script>
+    // Show sticky CTA after scrolling past hero
+    const stickyCta = document.getElementById('sticky-cta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.8) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    });
+
+    // Hide sticky CTA when contact form is in view
+    const contactSection = document.getElementById('contact-form');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          stickyCta.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(contactSection);
+
+    // Basic form submit handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const fname = document.getElementById('fname').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      if (!fname || !phone || !service) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      document.getElementById('form-success').style.display = 'block';
+      e.target.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
