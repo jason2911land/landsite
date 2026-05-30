@@ -423,12 +423,14 @@ nav {
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   margin-bottom: 20px;
+  background: var(--black);
 }
 
 .service-photos img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
+  display: block;
   filter: brightness(0.9);
   transition: filter 0.3s, transform 0.3s;
 }
@@ -490,12 +492,16 @@ nav {
 
 .why-image {
   position: relative;
+  background: var(--black);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .why-image img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
+  display: block;
 }
 
 .why-image-badge {
