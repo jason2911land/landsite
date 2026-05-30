@@ -247,7 +247,8 @@
         </div>
       </div>
       <div class="contact-right">
-        <div class="form-card">
+        <form class="form-card" action="https://formspree.io/f/xbdbeoqb" method="POST">
+          <input type="hidden" name="_subject" value="New Estimate Request — 29:11 Land Solutions">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name <span class="req">*</span></label>
@@ -286,15 +287,15 @@
           </div>
           <div class="form-sms-consent">
             <label class="sms-label">
-              <input type="checkbox" id="sms-consent" name="sms-consent">
+              <input type="checkbox" id="sms-consent" name="sms-consent" value="Opted in to SMS">
               <span class="sms-text">I agree to receive SMS communication from 29:11 Land Solutions regarding estimates, appointments, and service updates. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.</span>
             </label>
           </div>
-          <button type="submit" class="btn-primary form-submit" onclick="handleFormSubmit(event)">
+          <button type="submit" class="btn-primary form-submit">
             Send My Request <span class="arrow">→</span>
           </button>
-          <div class="form-success" id="form-success">Thanks! We'll be in touch shortly.</div>
-        </div>
+          <div class="form-success" id="form-success" style="display:none;">Thanks! We'll be in touch shortly.</div>
+        </form>
       </div>
     </div>
   </section>
@@ -424,15 +425,10 @@
       });
     });
 
-    // Form
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const fname   = document.getElementById('fname').value;
-      const phone   = document.getElementById('phone').value;
-      const service = document.getElementById('service').value;
-      if (!fname || !phone || !service) { alert('Please fill in all required fields.'); return; }
-      document.getElementById('form-success').style.display = 'block';
-      e.target.style.display = 'none';
+    // Form success message (Formspree redirects back with ?success)
+    if (window.location.search.includes('success')) {
+      const el = document.getElementById('form-success');
+      if (el) el.style.display = 'block';
     }
   </script>
 
