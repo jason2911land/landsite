@@ -416,6 +416,13 @@
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('mobile-open');
     });
+    // Close mobile menu when any nav link is tapped
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('mobile-open');
+      });
+    });
 
     // Form
     function handleFormSubmit(e) {
