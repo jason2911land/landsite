@@ -87,8 +87,7 @@ nav {
 }
 
 .nav-links .has-dropdown > a::after {
-  content: ' ▾';
-  font-size: 10px;
+  content: '';
 }
 
 .nav-cta {
@@ -1201,7 +1200,7 @@ footer {
 .nav-links .dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 0;
   background: var(--dark2);
   border-top: 2px solid var(--gold);
@@ -1210,6 +1209,7 @@ footer {
   min-width: 180px;
   z-index: 200;
   padding: 8px 0;
+  padding-top: 10px;
 }
 
 .nav-links .has-dropdown:hover .dropdown {
