@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Jason & 29:11 Land Solutions | Godley, TX</title>
+  <meta name="description" content="Meet Jason — the owner and operator of 29:11 Land Solutions. A faith-driven family man from Godley, TX dedicated to hard work, honest pricing, and quality land services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      min-height: 340px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 60px;
+      background: var(--dark);
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('land1.png');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: 0.25;
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.92) 100%);
+    }
+    .page-hero-content {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+      padding-top: 140px;
+    }
+    .page-hero-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .page-hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 7vw, 80px);
+      line-height: 1;
+      color: var(--white);
+      margin: 0 0 16px;
+    }
+    .page-hero-title span { color: var(--gold); }
+    .page-hero-sub {
+      font-family: 'Barlow', sans-serif;
+      font-size: 17px;
+      color: rgba(255,255,255,0.72);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    /* ── ABOUT INTRO ── */
+    .about-intro {
+      background: var(--black);
+      padding: 80px 40px;
+    }
+    .about-intro-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-photo-col {
+      position: relative;
+    }
+    .about-photo-frame {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .about-photo-frame img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      filter: brightness(0.92) contrast(1.05);
+    }
+    .about-photo-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      border: 3px solid var(--gold);
+      border-radius: 4px;
+      z-index: -1;
+    }
+    .about-photo-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+    }
+    .about-text-col {}
+    .about-text-col .section-label { margin-bottom: 10px; }
+    .about-name-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1;
+      color: var(--white);
+      margin: 0 0 6px;
+    }
+    .about-name-heading span { color: var(--gold); }
+    .about-role {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .about-body {
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 20px;
+    }
+    .about-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--gold);
+      margin: 28px 0;
+    }
+    .about-traits {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .about-trait {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .about-trait-icon {
+      width: 38px;
+      height: 38px;
+      background: rgba(232,160,32,0.12);
+      border: 1px solid rgba(232,160,32,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .about-trait-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+    }
+    .about-trait-text strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .about-trait-text p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ── MISSION STRIP ── */
+    .mission-strip {
+      background: var(--gold);
+      padding: 60px 40px;
+    }
+    .mission-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .mission-strip-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+      margin-bottom: 12px;
+    }
+    .mission-strip-quote {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      color: var(--black);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .mission-strip-verse {
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      color: rgba(0,0,0,0.6);
+      font-style: italic;
+    }
+
+    /* ── VALUES SECTION ── */
+    .values-section {
+      background: var(--dark);
+      padding: 80px 40px;
+    }
+    .values-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .values-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 36px 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .value-card:hover {
+      border-color: rgba(232,160,32,0.35);
+      transform: translateY(-3px);
+    }
+    .value-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      color: rgba(232,160,32,0.15);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .value-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .value-desc {
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* ── WHAT WE DO STRIP ── */
+    .services-strip {
+      background: var(--dark2);
+      padding: 60px 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .services-strip-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .services-strip-text h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 4vw, 50px);
+      color: var(--white);
+      margin: 0 0 8px;
+    }
+    .services-strip-text h2 span { color: var(--gold); }
+    .services-strip-text p {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+    .services-strip-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .service-pill {
+      background: rgba(232,160,32,0.1);
+      border: 1px solid rgba(232,160,32,0.3);
+      color: var(--gold);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 2px;
+    }
+
+    /* ── CTA SECTION ── */
+    .about-cta {
+      background: var(--black);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 5vw, 60px);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .about-cta h2 span { color: var(--gold); }
+    .about-cta p {
+      font-size: 17px;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .about-intro { padding: 60px 20px; }
+      .about-intro-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-photo-accent { display: none; }
+      .values-grid { grid-template-columns: 1fr; }
+      .services-strip-inner { flex-direction: column; align-items: flex-start; }
+      .page-hero-content { padding: 0 20px; padding-top: 130px; }
+      .mission-strip { padding: 50px 20px; }
+      .values-section { padding: 60px 20px; }
+      .about-cta { padding: 60px 20px; }
+      .services-strip { padding: 50px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="tel:6822281984" class="mobile-phone-bar">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  Call or Text Jason — 682-228-1984
+</a>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="LOGO.png" alt="29:11 Land Solutions Logo"></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li class="has-dropdown">
+      <a href="#">Service Areas ▾</a>
+      <ul class="dropdown">
+        <li><a href="godley.html">Godley, TX</a></li>
+        <li><a href="burleson.html">Burleson, TX</a></li>
+        <li><a href="cleburne.html">Cleburne, TX</a></li>
+        <li><a href="joshua.html">Joshua, TX</a></li>
+        <li><a href="granbury.html">Granbury, TX</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#contact-form">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-right-top">
+      <ul class="nav-social-links">
+        <li><a href="#" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+        <li><a href="#" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a></li>
+        <li><a href="#" title="Google" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a></li>
+      </ul>
+      <a href="tel:6822281984" class="nav-cta">
+        <svg class="nav-phone-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <div><span class="nav-cta-label">Call or Text Jason</span><br><span class="nav-cta-number">682-228-1984</span></div>
+      </a>
+    </div>
+    <span class="nav-free-est">Free Estimates</span>
+  </div>
+  <div class="mobile-nav-right">
+    <ul class="nav-social-mobile">
+      <li><a href="#" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+      <li><a href="#" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a></li>
+      <li><a href="#" title="Google" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <p class="page-hero-label">The Man Behind The Machine</p>
+    <h1 class="page-hero-title">Meet <span>Jason.</span></h1>
+    <p class="page-hero-sub">Godley local. Family man. Built his business the same way he does his work — with his hands, his word, and his faith.</p>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="about-intro">
+  <div class="about-intro-inner">
+    <div class="about-photo-col">
+      <div class="about-photo-frame">
+        <img src="skidsteer1.png" alt="Jason - Owner of 29:11 Land Solutions">
+        <div class="about-photo-tag">Owner & Operator</div>
+      </div>
+      <div class="about-photo-accent"></div>
+    </div>
+    <div class="about-text-col">
+      <p class="section-label">About Jason</p>
+      <h2 class="about-name-heading">Jason<br><span>29:11 Land Solutions</span></h2>
+      <p class="about-role">Owner & Operator — Godley, Texas</p>
+      <p class="about-body">Jason isn't some big faceless company sending out a crew you've never met. When you call 29:11 Land Solutions, you get Jason — the guy who shows up, runs the equipment, and stands behind every job with his name on it.</p>
+      <p class="about-body">He built this company right here in Godley, TX, grounded in the same values he was raised with: work hard, be honest, and do right by people. That's not a marketing line — it's just how he operates.</p>
+      <div class="about-divider"></div>
+      <div class="about-traits">
+        <div class="about-trait">
+          <div class="about-trait-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="about-trait-text">
+            <strong>Godley, TX — Born & Raised</strong>
+            <p>This isn't just where Jason works. It's where he lives, raises his family, and calls home.</p>
+          </div>
+        </div>
+        <div class="about-trait">
+          <div class="about-trait-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="about-trait-text">
+            <strong>Family First</strong>
+            <p>Everything Jason builds is for his family. That purpose shows in the quality of every job he takes on.</p>
+          </div>
+        </div>
+        <div class="about-trait">
+          <div class="about-trait-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="about-trait-text">
+            <strong>Faith-Driven Work Ethic</strong>
+            <p>The name 29:11 isn't random — it's a reminder. He shows up to every job with that same intention.</p>
+          </div>
+        </div>
+      </div>
+      <a href="index.html#contact-form" class="btn-primary">Get a Free Estimate <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION STRIP -->
+<section class="mission-strip">
+  <div class="mission-strip-inner">
+    <p class="mission-strip-label">The Name Means Something</p>
+    <div class="mission-strip-quote">"For I know the plans I have for you — plans to prosper you and not to harm you, plans to give you hope and a future."</div>
+    <p class="mission-strip-verse">— Jeremiah 29:11 &nbsp;|&nbsp; The verse behind the name.</p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="values-inner">
+    <div class="values-header">
+      <p class="section-label">How We Work</p>
+      <h2 class="section-heading">The Way Jason<br><span class="text-gold">Does Business</span></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-number">01</div>
+        <div class="value-title">You Get a Real Answer</div>
+        <p class="value-desc">No runaround. No vague estimates that balloon on you later. Jason tells you what it'll cost and what to expect — straight up.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-number">02</div>
+        <div class="value-title">He Shows Up</div>
+        <p class="value-desc">Too many contractors flake. Jason doesn't. When he says he'll be there, he's there. That reliability alone sets him apart in this area.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-number">03</div>
+        <div class="value-title">The Work Speaks</div>
+        <p class="value-desc">No shortcuts. No "good enough." Every job gets done the right way because Jason's name and reputation are on every single project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section class="services-strip">
+  <div class="services-strip-inner">
+    <div class="services-strip-text">
+      <h2>What We <span>Handle</span></h2>
+      <p>From raw land to finished driveways, Jason handles the full scope of dirt work and land prep for residential and rural properties across Johnson County.</p>
+    </div>
+    <div class="services-strip-pills">
+      <span class="service-pill">Land Clearing</span>
+      <span class="service-pill">Gravel Driveways</span>
+      <span class="service-pill">Land Leveling</span>
+      <span class="service-pill">Site Prep</span>
+      <span class="service-pill">Haul Off</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <h2>Ready to Work With <span>Someone You Can Trust?</span></h2>
+  <p>Get a free, no-pressure estimate. Jason will get back to you fast — usually same day.</p>
+  <div class="about-cta-btns">
+    <a href="index.html#contact-form" class="btn-primary">Request a Free Estimate <span class="arrow">→</span></a>
+    <a href="tel:6822281984" class="btn-secondary">Call or Text Jason <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-banner-text">
+    <h2 class="cta-banner-heading">Ready to Get <em>Your Project</em> Started?</h2>
+    <p class="cta-banner-sub">Let's get your land ready for what's next.</p>
+  </div>
+  <a href="tel:6822281984" class="cta-phone-block">
+    <svg class="cta-phone-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <div><div class="cta-phone-label">Call or Text Jason</div><div class="cta-phone-number">682-228-1984</div></div>
+  </a>
+  <a href="index.html#contact-form" class="btn-primary cta-btn-large">Request a Free Estimate <span class="arrow">→</span></a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html"><img src="LOGO.png" alt="29:11 Land Solutions" class="footer-logo"></a>
+      <p class="footer-brand-desc">Proudly serving Godley, TX and surrounding areas with quality land solutions you can count on.</p>
+      <ul class="social-links">
+        <li><a href="#" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+        <li><a href="#" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a></li>
+        <li><a href="#" title="Google" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></a></li>
+      </ul>
+    </div>
+    <div><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="index.html#services">Land Clearing</a></li><li><a href="index.html#services">Gravel Driveways</a></li><li><a href="index.html#services">Land Leveling</a></li><li><a href="index.html#services">Site Prep</a></li><li><a href="index.html#services">Haul Off</a></li></ul></div>
+    <div><div class="footer-col-title">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="index.html#contact-form">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div>
+    <div><div class="footer-col-title">Service Areas</div><ul class="footer-links"><li><a href="godley.html">Godley, TX</a></li><li><a href="burleson.html">Burleson, TX</a></li><li><a href="cleburne.html">Cleburne, TX</a></li><li><a href="joshua.html">Joshua, TX</a></li><li><a href="granbury.html">Granbury, TX</a></li></ul></div>
+    <div><div class="footer-col-title">Contact</div><div class="footer-contact-item"><svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><span>682-228-1984</span></div><div class="footer-contact-item"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>jason2911land@gmail.com</span></div><div class="footer-contact-item"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Godley, TX</span></div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">© 2024 29:11 Land Solutions. All Rights Reserved.</div>
+    <div class="footer-bottom-right">Designed by <a href="https://legacyivdigital.com" target="_blank" rel="noopener">Legacy IV Digital Solutions</a></div>
+  </div>
+</footer>
+
+<a href="index.html#contact-form" class="sticky-cta" id="sticky-cta">Request a Free Estimate <span class="arrow">→</span></a>
+
+<script>
+  const stickyCta = document.getElementById('sticky-cta');
+  window.addEventListener('scroll', () => { stickyCta.classList.toggle('visible', window.scrollY > 400); });
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); navLinks.classList.toggle('mobile-open'); });
+</script>
+</body>
+</html>
