@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .page-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;padding-bottom:60px;background:var(--dark);overflow:hidden}
-    .page-hero-bg{position:absolute;inset:0;background-image:url('skidsteer1.png');background-size:cover;background-position:center 40%;opacity:0.22}
+    .page-hero-bg{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20400'%20preserveAspectRatio='xMidYMid%20slice'%3E%20%20%20%3Cdefs%3E%20%20%20%20%20%3ClinearGradient%20id='sky2'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0%25'%20stop-color='%25230d1117'/%3E%3Cstop%20offset='100%25'%20stop-color='%25231a1205'/%3E%3C/linearGradient%3E%20%20%20%3C/defs%3E%20%20%20%3Crect%20width='1200'%20height='400'%20fill='url(%2523sky2)'/%3E%20%20%20%3C%21--%20subdivision%20lots%20/%20grid%20lines%20suggesting%20development%20--%3E%20%20%20%3Cline%20x1='0'%20y1='320'%20x2='1200'%20y2='320'%20stroke='%2523E8A020'%20stroke-width='1.5'%20opacity='0.12'/%3E%20%20%20%3Cline%20x1='0'%20y1='280'%20x2='1200'%20y2='260'%20stroke='%2523E8A020'%20stroke-width='1'%20opacity='0.08'/%3E%20%20%20%3C%21--%20house%20silhouettes%20across%20horizon%20--%3E%20%20%20%3Crect%20x='60'%20y='270'%20width='80'%20height='50'%20fill='%25230a0a00'%20opacity='0.85'/%3E%20%20%20%3Cpolygon%20points='60,270%20100,235%20140,270'%20fill='%25230c0c00'%20opacity='0.9'/%3E%20%20%20%3Crect%20x='160'%20y='265'%20width='70'%20height='55'%20fill='%25230a0a00'%20opacity='0.85'/%3E%20%20%20%3Cpolygon%20points='160,265%20195,232%20230,265'%20fill='%25230c0c00'%20opacity='0.9'/%3E%20%20%20%3Crect%20x='250'%20y='272'%20width='90'%20height='48'%20fill='%25230a0a00'%20opacity='0.85'/%3E%20%20%20%3Cpolygon%20points='250,272%20295,238%20340,272'%20fill='%25230c0c00'%20opacity='0.9'/%3E%20%20%20%3C%21--%20taller%20building%20right%20side%20--%3E%20%20%20%3Crect%20x='900'%20y='220'%20width='60'%20height='100'%20fill='%25230d0d0d'%20opacity='0.9'/%3E%20%20%20%3Crect%20x='910'%20y='230'%20width='12'%20height='12'%20fill='%2523E8A020'%20opacity='0.2'/%3E%20%20%20%3Crect%20x='930'%20y='230'%20width='12'%20height='12'%20fill='%2523E8A020'%20opacity='0.15'/%3E%20%20%20%3Crect%20x='910'%20y='250'%20width='12'%20height='12'%20fill='%2523E8A020'%20opacity='0.18'/%3E%20%20%20%3Crect%20x='980'%20y='240'%20width='50'%20height='80'%20fill='%25230d0d0d'%20opacity='0.9'/%3E%20%20%20%3C%21--%20road%20perspective%20lines%20--%3E%20%20%20%3Cpolygon%20points='500,400%20600,400%20620,320%20480,320'%20fill='%2523151500'%20opacity='0.6'/%3E%20%20%20%3Cline%20x1='540'%20y1='400'%20x2='550'%20y2='320'%20stroke='%2523E8A020'%20stroke-width='2'%20opacity='0.15'%20stroke-dasharray='12,8'/%3E%20%20%20%3C%21--%20stars%20--%3E%20%20%20%3Ccircle%20cx='100'%20cy='50'%20r='1'%20fill='white'%20opacity='0.45'/%3E%20%20%20%3Ccircle%20cx='400'%20cy='35'%20r='1.5'%20fill='white'%20opacity='0.4'/%3E%20%20%20%3Ccircle%20cx='700'%20cy='55'%20r='1'%20fill='white'%20opacity='0.5'/%3E%20%20%20%3Ccircle%20cx='1050'%20cy='40'%20r='1.5'%20fill='white'%20opacity='0.4'/%3E%20%3C/svg%3E");background-size:cover;background-position:center center;opacity:1}
     .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.45) 0%,rgba(10,10,10,0.93) 100%)}
     .page-hero-content{position:relative;max-width:900px;margin:0 auto;padding:0 40px;padding-top:140px}
     .page-hero-label{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
@@ -33,6 +33,7 @@
     .angle-box p{font-size:15px;line-height:1.65;color:rgba(255,255,255,0.7);margin:0}
     .services-city{background:var(--dark);padding:70px 40px;border-top:1px solid rgba(255,255,255,0.06)}
     .services-city-inner{max-width:1100px;margin:0 auto}
+    .services-city .section-heading{color:var(--white)}
     .services-city-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
     .svc-tile{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:4px;padding:24px 18px;text-align:center;transition:border-color 0.2s,transform 0.2s}
     .svc-tile:hover{border-color:rgba(232,160,32,0.35);transform:translateY(-3px)}
@@ -117,16 +118,17 @@
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <p class="page-hero-label">Serving Burleson, TX</p>
-    <h1 class="page-hero-title">Land Clearing &<br>
+    <h1 class="page-hero-title">Gravel Driveways &amp;<br>
+        Site Prep in<br>
         <span>Burleson, TX.</span></h1>
-    <p class="page-hero-sub">Burleson is growing fast. Whether you're prepping a new lot, fixing drainage, or putting in a driveway that actually holds up, Jason gets it done right.</p>
+    <p class="page-hero-sub">Burleson is growing fast and property owners need a contractor who shows up, charges what they quote, and does the work right. That's exactly what Jason delivers.</p>
   </div>
 </section>
 
 <section class="city-intro">
   <div class="city-intro-inner">
     <div class="city-img">
-      <img src="skidsteer2.png" alt="29:11 Land Solutions serving Burleson, TX">
+      <img src="driveway.png" alt="29:11 Land Solutions serving Burleson, TX">
       <div class="city-img-badge">Serving Burleson, TX</div>
     </div>
     <div class="city-text">
