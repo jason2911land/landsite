@@ -406,13 +406,16 @@ nav {
    SERVICES SECTION
    ============================================ */
 .services-section {
-  background: var(--light-gray);
+  background: var(--dark);
   padding: 80px 60px;
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 60px;
   align-items: start;
 }
+
+.services-section .section-heading { color: var(--white); }
+.services-section .section-body    { color: rgba(255,255,255,0.65); }
 
 /* Service photo strip */
 .service-photos {
